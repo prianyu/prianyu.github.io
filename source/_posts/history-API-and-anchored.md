@@ -12,7 +12,7 @@ Ajax的流行和前端MVVM框架的快速发展给Web开发带来了极大的便
 ![](https://user-gold-cdn.xitu.io/2017/11/29/160074e83cade239?w=395&h=267&f=gif&s=68940)
 
 
-需求点：
+### 需求点
 
 + 点击手机信息所在项，从右边划出手机编辑页面
 
@@ -100,6 +100,7 @@ var vm = new Vue({
 });
 ```
 
+
 以下通过两种方法来完成以上的需求
 
 ### 方法一： 使用history API 来实现
@@ -178,7 +179,7 @@ window.addEventListener('popstate', function(e){//监听前进和后退
 
 借助`hash`实现我们的需求的基本思路如下：
 
-1. 点击手机编辑后，改变`hash`值为'#edit'
+1. 点击手机编辑后，改变`hash`值为`#edit`
 
 2. 监听`hash`值的变化，通过判断值来控制页面的切换(在这里改变`vm.edit`的值)
 

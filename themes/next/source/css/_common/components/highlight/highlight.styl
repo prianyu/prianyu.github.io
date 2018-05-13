@@ -5,6 +5,7 @@
 
 // Placeholder: $code-block
 $code-block {
+  position:relative;/*custom-css*/
   overflow: auto;
   margin: 20px 0;
   padding: 0;
@@ -12,6 +13,24 @@ $code-block {
   color: $highlight-foreground;
   background: $highlight-background;
   line-height: $line-height-code-block;
+  &:after {
+    position: absolute;
+    top: $languageTipGap;
+    right: $languageTipGap;
+    color: $languageTipColor;
+  }
+  &.javascript:after{
+    content: 'Javascript';
+  }
+  &.php:after {
+    content: 'PHP';
+  }
+  &.css:after {
+    content: 'CSS';
+  }
+  &.html:after {
+    content: 'HTML';
+  }
 }
 
 pre, code { font-family: $code-font-family; }
